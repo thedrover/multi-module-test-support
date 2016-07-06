@@ -34,6 +34,12 @@ dependencies {
 
 tasks.whenTaskAdded { task ->
     if (task.name == 'compileDebugUnitTestSources') {
-        task.finalizedBy packageTests
+        task.finalizedBy packageUnitTests
+    }
+}
+
+tasks.whenTaskAdded { task ->
+    if (task.name == 'packageDebugAndroidTest') {
+        task.finalizedBy packageInstrumentationTests
     }
 }

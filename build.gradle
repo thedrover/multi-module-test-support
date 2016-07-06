@@ -17,7 +17,7 @@ allprojects {
         jcenter()
     }
 
-    task packageTests(type: Jar) {
+    task packageUnitTests(type: Jar) {
         from file("${buildDir}/intermediates/classes/test/debug/")
         archiveName "${project.name}-tests.jar"
         // dstinationDir null so use explicit property
@@ -25,6 +25,17 @@ allprojects {
         description 'Package test JAR for sharing'
         doLast {
             println "Packaged test JAR for sharing: ${testJarLocation}"
+        }
+    }
+
+    task packageInstrumentationTests(type: Jar) {
+        from file("${buildDir}/intermediates/classes/androidTest/debug/")
+        archiveName "${project.name}-androidTests.jar"
+        // dstinationDir null so use explicit property
+        ext.testJarLocation="${project.buildDir}/libs/${archivePath}"
+        description 'Package instrumentation test JAR for sharing'
+        doLast {
+            println "Packaged instrumentation test JAR for sharing: ${testJarLocation}"
         }
     }
 }
