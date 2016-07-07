@@ -42,7 +42,7 @@ dependencies {
 }
 
 tasks.whenTaskAdded { task ->
-    if (task.name == 'compileDebugUnitTestSources') {
+    if (task.name == 'compileDebugUnitTestJavaWithJavac') {
         task.dependsOn ":ProviderModule:packageUnitTests"
     }
 }
