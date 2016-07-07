@@ -18,7 +18,7 @@ public class ProviderUnitTest extends TestBaseClass {
 
   @Test
   public void subtract_isCorrect() {
-    assertEquals(1, substract(3, 2));
+    assertEquals(1, subtract(3, 2));
   }
 
 

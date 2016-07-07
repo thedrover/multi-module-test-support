@@ -15,17 +15,11 @@ import org.junit.runner.RunWith;
 @MediumTest
 @RunWith(AndroidJUnit4.class)
 public class ProviderInstrumentationTest extends BaseInstrumentationTest {
-//  @Test
-//  public void useAppContext() throws Exception {
-//    // Context of the app under test.
-//    Context appContext = InstrumentationRegistry.getTargetContext();
-//
-//    assertEquals("com.example.providermodule.test", appContext.getPackageName());
-//  }
+
 
   @Test
   public void addition_isCorrect() throws Exception {
-    Assert.assertEquals(5, add(2, 3));
+    Assert.assertEquals(5, ProviderTestHelper.add(2, 3));
   }
 
   @Test
@@ -33,9 +27,5 @@ public class ProviderInstrumentationTest extends BaseInstrumentationTest {
     Assert.assertEquals(1, subtract(3, 2));
   }
 
-
-  public static int add(int a, int b) {
-    return a + b;
-  }
 
 }

@@ -5,7 +5,7 @@ package com.example.providermodule;
  */
 public class TestBaseClass {
 
-  protected int substract(int a, int b) {
+  protected int subtract(int a, int b) {
     return a - b;
   }
 }

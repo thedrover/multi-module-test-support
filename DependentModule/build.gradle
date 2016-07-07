@@ -33,8 +33,10 @@ dependencies {
     testCompile files(project(':ProviderModule').packageUnitTests.testJarLocation)
     testCompile 'junit:junit:4.12'
 
+    // Include the unit and instrumentation JARs. Adjust depending on where re-used test code resides.
     androidTestCompile files(project(':ProviderModule').packageInstrumentationTests.testJarLocation)
-    //androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    androidTestCompile files(project(':ProviderModule').packageUnitTests.testJarLocation)
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
     androidTestCompile 'com.android.support.test:runner:0.5'
     androidTestCompile 'com.android.support:support-annotations:24.0.0'
 }
