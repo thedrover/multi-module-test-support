@@ -25,6 +25,10 @@ android:
     # - sys-img-armeabi-v7a-android-23
     - sys-img-x86-android-24
 
+   licenses: 
+    - android-sdk-license-.+
+    - google-gdk-license-.+
+
 jdk:
   - oraclejdk8
 
